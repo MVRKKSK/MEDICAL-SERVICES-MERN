@@ -3,6 +3,8 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar'
 import FrontPage from './components/FrontPage/FrontPage'
 import Services from './components/Services/Services'
+import Info from './components/Info/Info'
+import Footer from './components/Footer/Footer'
 function App() {
   return (
     <div className="App">
@@ -16,8 +18,10 @@ function App() {
       <Services/>
 
       {/* Info     */}
+      <Info/>
 
       {/* Footer   */}
+      <Footer/>
     </div>
   );
 }
