@@ -1,6 +1,7 @@
 
 import './App.css';
 import Navbar from './components/Navbar/Navbar'
+import FrontPage from './components/FrontPage/FrontPage'
 function App() {
   return (
     <div className="App">
@@ -8,6 +9,7 @@ function App() {
       <Navbar/>
 
       {/* FrontPage   */}
+      <FrontPage/>
 
       {/* services */}
 
