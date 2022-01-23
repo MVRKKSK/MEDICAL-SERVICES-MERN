@@ -1,18 +1,9 @@
 import React from 'react';
-import './Navbar.css'
 
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-    Link
-  } from "react-router-dom";
-
-const Navbar = () => {
+const PageNavbar = () => {
   return (
- 
-    <div className="navbar1">
-    <nav className="navbar navbar-expand-lg navbar-dark" id="navbar" style={{"background-color": "#FE2C54"}}> 
+      <div className="pagenavbar">
+          <nav className="navbar navbar-expand-lg navbar-dark" id="navbar" style={{"background-color":"#fe2c54"}}> 
         <div className="container-fluid">
             <a className="navbar-brand" href="#">
                 <div className="logo-container">
@@ -27,7 +18,13 @@ const Navbar = () => {
             <div className="collapse navbar-collapse m-2" id="navbarSupportedContent">
                 <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li className="nav-item m-1 pb-1 ">
-                    <a className="nav-link active" aria-current="page" href="#">
+                        <a className="nav-link active" aria-current="page" href="./index.html">
+                            <span className="material-icons">home</span>
+                            Home
+                        </a>
+                    </li>
+                    <li className="nav-item m-1 pb-1 ">
+                        <a className="nav-link active" aria-current="page" href="./plasma-donors-list-page.html">
                             <span className="material-icons">bloodtype</span>
                             Plasma Donors
                         </a>
@@ -80,17 +77,8 @@ const Navbar = () => {
         </div>
     </nav>
 
-    
-
-    </div>
-  
-
-   
-
-
-
-
+      </div>
   );
 };
 
-export default Navbar;
+export default PageNavbar;
