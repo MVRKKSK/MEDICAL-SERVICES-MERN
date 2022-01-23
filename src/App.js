@@ -9,7 +9,7 @@ import {BrowserRouter as Router,Route,Link, Switch} from 'react-router-dom'
 import landingPage from './Pages/landingpage'
 import plasmadonor from './Pages/plasmadonor'
 import hospitalbeds from './Pages/hospitalbeds'
-
+import oxygensuppliers from './Pages/oxygensuppliers'
 
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
         <Route path='/' exact component={landingPage} />
         <Route path='/plasma' exact component={plasmadonor} />
         <Route path='/hospitalbeds' exact component={hospitalbeds} />
+        <Route path='/oxygensupply' exact component={oxygensuppliers} />
 
 
         {/* <Route path='/about' component={About} />
