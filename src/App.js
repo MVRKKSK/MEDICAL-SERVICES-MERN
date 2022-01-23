@@ -8,7 +8,7 @@ import {BrowserRouter as Router,Route,Link, Switch} from 'react-router-dom'
 // import Footer from './components/Footer/Footer'
 import landingPage from './Pages/landingpage'
 import plasmadonor from './Pages/plasmadonor'
-
+import hospitalbeds from './Pages/hospitalbeds'
 
 
 
@@ -19,6 +19,8 @@ function App() {
       <Switch>
         <Route path='/' exact component={landingPage} />
         <Route path='/plasma' exact component={plasmadonor} />
+        <Route path='/hospitalbeds' exact component={hospitalbeds} />
+
 
         {/* <Route path='/about' component={About} />
         <Route path='/events' component={Events} />
