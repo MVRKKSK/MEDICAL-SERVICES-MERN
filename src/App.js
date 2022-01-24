@@ -12,7 +12,7 @@ import hospitalbeds from './Pages/hospitalbeds'
 import oxygensuppliers from './Pages/oxygensuppliers'
 import medssuppliers from './Pages/medssuppliers';
 import ambulanceprovider from './Pages/ambulanceproviders'
-
+import allresourcespage from './Pages/allresourcespages'
 
 function App() {
   return (
@@ -25,6 +25,7 @@ function App() {
         <Route path='/oxygensupply' exact component={oxygensuppliers} />
         <Route path='/medssupply' exact component={medssuppliers} />
         <Route path='/ambulanceprovider' exact component={ambulanceprovider} />
+        <Route path='/resourcespage' exact component={allresourcespage} />
 
 
 

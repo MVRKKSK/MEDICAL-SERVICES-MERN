@@ -70,7 +70,7 @@ const Navbar = () => {
                             More Resources
                         </a>
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a className="dropdown-item" href="./all-resources-page.html" target="_parent">All Resources</a></li>
+                            <li><Link to="/resourcespage" className="dropdown-item"  target="_parent">All Resources</Link></li>
                             <li><a className="dropdown-item" href="./websites-list-page.html" target="_parent">Websites</a></li>
                             <li><a className="dropdown-item" href="./instagram-resources-list-page.html" target="_parent">Instagram</a></li>
                             <li><a className="dropdown-item" href="./twitter-resources-list-page.html" target="_parent">Twitter</a></li>
