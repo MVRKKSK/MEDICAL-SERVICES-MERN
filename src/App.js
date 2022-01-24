@@ -10,6 +10,7 @@ import landingPage from './Pages/landingpage'
 import plasmadonor from './Pages/plasmadonor'
 import hospitalbeds from './Pages/hospitalbeds'
 import oxygensuppliers from './Pages/oxygensuppliers'
+import medssuppliers from './Pages/medssuppliers';
 
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
         <Route path='/plasma' exact component={plasmadonor} />
         <Route path='/hospitalbeds' exact component={hospitalbeds} />
         <Route path='/oxygensupply' exact component={oxygensuppliers} />
+        <Route path='/medssupply' exact component={medssuppliers} />
+
 
 
         {/* <Route path='/about' component={About} />
