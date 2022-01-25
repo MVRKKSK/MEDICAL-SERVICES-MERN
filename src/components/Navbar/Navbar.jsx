@@ -71,9 +71,9 @@ const Navbar = () => {
                         </a>
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><Link to="/resourcespage" className="dropdown-item"  target="_parent">All Resources</Link></li>
-                            <li><a className="dropdown-item" href="./websites-list-page.html" target="_parent">Websites</a></li>
-                            <li><a className="dropdown-item" href="./instagram-resources-list-page.html" target="_parent">Instagram</a></li>
-                            <li><a className="dropdown-item" href="./twitter-resources-list-page.html" target="_parent">Twitter</a></li>
+                            <li><Link to="/websiteslist" className="dropdown-item"  target="_parent">Websites</Link></li>
+                            <li><Link to="/instagramresources" className="dropdown-item"  target="_parent">Instagram</Link></li>
+                            <li><Link to="/twitterresources" className="dropdown-item"  target="_parent">Twitter</Link></li>
                         </ul>
                     </li>
                 </ul>
