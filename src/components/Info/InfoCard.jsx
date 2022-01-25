@@ -1,6 +1,11 @@
 import React from 'react';
-
-const InfoCard = ({title,content,btninfo,image}) => {
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link
+  } from "react-router-dom";
+const InfoCard = ({title,content,btninfo,image,link}) => {
   return (
       <div className="infocard">
     <div className="container-fluid bg-light p-5">
@@ -13,9 +18,9 @@ const InfoCard = ({title,content,btninfo,image}) => {
                     <p className="lead">
                         {content}
                     </p>
-                    <a className="btn btn-primary btn-lg px-4 mt-2 mb-5" href="./add-plasma-donor-contact-page.html" role="button">
+                    <Link to={link} className="btn btn-primary btn-lg px-4 mt-2 mb-5"  role="button">
                         {btninfo}
-                    </a>
+                    </Link>
                 </div>
                 <div className="col-xl-5 col-lg-5 col-md-6 col-sm-12">
                     <img src={image} className="contact-section-image shadow-lg rounded img-fluid mx-auto d-none d-sm-none d-md-block d-lg-block d-xl-block" alt="Add Details about Plasma Donor" width="500" height="500" />

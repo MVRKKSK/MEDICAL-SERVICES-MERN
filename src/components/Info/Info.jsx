@@ -14,7 +14,7 @@ const Info = () => {
       <div className="info">
           <InfoCard title="Donate Plasma" content="If you want to Donate Plasma OR Know someone who can Donate plasma then click the button below. We will get in touch with the Contact provided and also Try to Verify it as soon as possible."
           btninfo="Add a Plasma Donor Contact"
-          image={service1}
+          image={service1} link="/plasmadonorcontact"
           
           />
           <InfoCardLeft title="Hospital Beds" content="If you know the Hospital that has Beds Available OR Know someone who has
