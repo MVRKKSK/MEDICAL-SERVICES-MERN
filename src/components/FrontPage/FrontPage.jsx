@@ -1,6 +1,11 @@
 import React from 'react';
 import staysafe from '../FrontPage/stay-safe-banner.jpg'
-
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link
+  } from "react-router-dom";
 const FrontPage = () => {
   return (
     <div className="frontpage">
@@ -46,9 +51,9 @@ const FrontPage = () => {
                     <div className="d-md-flex justify-md-content-center">
     
                         <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-                            <a className="btn btn-primary btn-lg me-md-2 mb-3" href="./join-as-a-volunteer-page.html" target="_parent" role="button">
+                            <Link to="/volunteerpage" className="btn btn-primary btn-lg me-md-2 mb-3"  target="_parent" role="button">
                                 Join as a Volunteer
-                            </a>
+                            </Link>
                         </div>
     
                     </div>

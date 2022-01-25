@@ -16,6 +16,7 @@ import allresourcespage from './Pages/allresourcespages'
 import websiteslist from './Pages/websiteslist';
 import instagramresources from './Pages/instagramresources'
 import twitterresources from './Pages/twitterresources'
+import volunteerpage from './Pages/volunteerpage'
 
 function App() {
   return (
@@ -32,6 +33,8 @@ function App() {
         <Route path='/websiteslist' exact component={websiteslist} />
         <Route path='/instagramresources' exact component={instagramresources} />
         <Route path='/twitterresources' exact component={twitterresources} />
+        <Route path='/volunteerpage' exact component={volunteerpage} />
+
 
 
 
