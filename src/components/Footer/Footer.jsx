@@ -1,5 +1,11 @@
 import React from 'react';
 import './Footer.css'
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link
+  } from "react-router-dom";
 const Footer = () => {
   return (
       <div className="footer">
@@ -12,7 +18,7 @@ const Footer = () => {
             </div>
 
             <div className="col-4 d-flex justify-content-around">
-                <a href="./terms-and-conditions-page.html" target="_parent" className="text-white">Terms & Conditions</a>
+                <Link to="/termsandcondition" target="_parent" className="text-white">Terms & Conditions</Link>
             </div>
 
             <div className="col-4 d-flex justify-content-around">
