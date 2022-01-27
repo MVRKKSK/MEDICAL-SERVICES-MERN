@@ -1,7 +1,12 @@
 import React from 'react';
 import Footer from '../components/Footer/Footer';
 import PageNavbar from '../components/Navbar/PageNavbar';
-
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link
+  } from "react-router-dom";
 const ambulanceproviders = () => {
   return (
       <div className="ambulanceproviders">
@@ -154,9 +159,9 @@ const ambulanceproviders = () => {
                 <p class="lead mt-5">To Share any Information related to Ambulance Service Providers</p>
     
                 <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-3 mb-3">
-                    <a class="btn btn-danger mb-5" href="./add-ambulance-provider-contact-page.html" role="button">
+                    <Link to="/ambulanceprovidercontact" class="btn btn-danger mb-5"  role="button">
                         Click Here to ADD Information about Ambulance Service Provider
-                    </a>
+                    </Link>
                 </div>
             </div>
 

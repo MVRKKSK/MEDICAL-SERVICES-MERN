@@ -21,6 +21,7 @@ import plasmadonorcontact from './Pages/plasmadonorcontact';
 import hospitalbedcontact from './Pages/hospitalbedcontact'
 import oxygensupplycontact from './Pages/oxygensupplycontact'
 import medssuppliercontact from './Pages/medssuppliercontact'
+import ambulanceprovidercontact from './Pages/ambulanceprovidercontact'
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
         <Route path='/hospitalbedcontact' exact component={hospitalbedcontact} />
         <Route path='/oxygensupplycontact' exact component={oxygensupplycontact} />
         <Route path='/medssupplycontact' exact component={medssuppliercontact} />
+        <Route path='/ambulanceprovidercontact' exact component={ambulanceprovidercontact} />
 
 
 

@@ -45,7 +45,7 @@ const Info = () => {
                         Information and click the button below. We will get in touch
                         with the Contact provided and also Try to Verify it as soon as possible."
                         btninfo="Add a Ambulance Provider Contact"
-                        image={service5}
+                        image={service5} link="/ambulanceprovidercontact"
           
           />
           
