@@ -1,7 +1,12 @@
 import React from 'react';
 import Footer from '../components/Footer/Footer';
 import PageNavbar from '../components/Navbar/PageNavbar'
-
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link
+  } from "react-router-dom";
 const medssuppliers = () => {
   return (
       <div className="medssuppliers">
@@ -154,9 +159,9 @@ const medssuppliers = () => {
                 <p class="lead mt-5">To Share any Information related to Available Meds/Injection Suppliers</p>
     
                 <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-3 mb-3">
-                    <a class="btn btn-success mb-5" href="./add-meds-supplier-contact-page.html" role="button">
+                    <Link to="/medssupplycontact" class="btn btn-success mb-5"  role="button">
                         Click Here to ADD Information about Meds/Injection Supplier
-                    </a>
+                    </Link>
                 </div>
             </div>
 

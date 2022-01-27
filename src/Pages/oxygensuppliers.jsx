@@ -1,7 +1,12 @@
 import React from 'react';
 import PageNavbar from '../components/Navbar/PageNavbar'
 import Footer from '../components/Footer/Footer'
-
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link
+  } from "react-router-dom";
 
 const oxygensuppliers = () => {
   return (
@@ -184,9 +189,9 @@ const oxygensuppliers = () => {
                 <p className="lead mt-5">To Share any Information related to Available Oxygen Suppliers</p>
     
                 <div className="d-grid gap-2 d-md-flex justify-content-md-start mt-3 mb-3">
-                    <a className="btn btn-info mb-5" href="./add-oxygen-supplier-contact-page.html" role="button">
+                    <Link to="/oxygensupplycontact" className="btn btn-info mb-5" role="button">
                         Click Here to ADD Information about Oxygen Supplier
-                    </a>
+                    </Link>
                 </div>
             </div>
     

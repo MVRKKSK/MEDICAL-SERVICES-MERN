@@ -1,6 +1,11 @@
 import React from 'react';
-
-const InfoCardLeft = ({title,content,btninfo,image}) => {
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link
+  } from "react-router-dom";
+const InfoCardLeft = ({title,content,btninfo,image,link}) => {
   return (
       <div className="infocardleft">
              <div class="container-fluid p-5">
@@ -13,9 +18,9 @@ const InfoCardLeft = ({title,content,btninfo,image}) => {
                     <p class="lead">
                         {content}
                     </p>
-                    <a class="btn btn-secondary btn-lg px-4 mt-2 mb-5" href="./add-hospital-contact-page.html" role="button">
+                    <Link to={link} class="btn btn-secondary btn-lg px-4 mt-2 mb-5" role="button">
                         {btninfo}
-                    </a>
+                    </Link>
                 </div>
                 <div class="col-xl-5 col-lg-5 col-md-6 col-sm-12 order-md-1">
                     <img src={image} class="contact-section-image shadow-lg rounded img-fluid mx-auto d-none d-sm-none d-md-block d-lg-block d-xl-block" alt="Add Details about Plasma Donor" width="500" height="500" />

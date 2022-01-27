@@ -21,7 +21,7 @@ const Info = () => {
                         proper Information then click the button below. We will get in touch
                         with the Contact provided and also Try to Verify it as soon as possible."
           btninfo="Add a Hospital Contact"
-          image={service2}
+          image={service2} link="/hospitalbedcontact"
           
           />
           <InfoCard title=" Oxygen Suppliers" content="If you can supply the Oxygen OR Know someone who supplies Oxygen
@@ -29,7 +29,7 @@ const Info = () => {
                         and click the button below. We will get in touch
                         with the Contact provided and also Try to Verify it as soon as possible."
           btninfo=" Add a Oxygen Supplier Contact"
-          image={service3}
+          image={service3} link="/oxygensupplycontact"
           
           />
           <InfoCardLeft title=" Meds/Injection Suppliers" content=" If you can supply the Medicines OR Know someone who supplies
@@ -37,7 +37,7 @@ const Info = () => {
                         Information and click the button below. We will get in touch
                         with the Contact provided and also Try to Verify it as soon as possible."
                         btninfo=" Add a Meds/Injection Contact"
-                        image={service4}
+                        image={service4} link="/medssupplycontact"
           
           />
           <InfoCard title=" Ambulance Service Providers" content=" If you can arrange for Ambulance OR Know someone who provides

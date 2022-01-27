@@ -18,6 +18,9 @@ import instagramresources from './Pages/instagramresources'
 import twitterresources from './Pages/twitterresources'
 import volunteerpage from './Pages/volunteerpage'
 import plasmadonorcontact from './Pages/plasmadonorcontact';
+import hospitalbedcontact from './Pages/hospitalbedcontact'
+import oxygensupplycontact from './Pages/oxygensupplycontact'
+import medssuppliercontact from './Pages/medssuppliercontact'
 
 function App() {
   return (
@@ -36,6 +39,9 @@ function App() {
         <Route path='/twitterresources' exact component={twitterresources} />
         <Route path='/volunteerpage' exact component={volunteerpage} />
         <Route path='/plasmadonorcontact' exact component={plasmadonorcontact} />
+        <Route path='/hospitalbedcontact' exact component={hospitalbedcontact} />
+        <Route path='/oxygensupplycontact' exact component={oxygensupplycontact} />
+        <Route path='/medssupplycontact' exact component={medssuppliercontact} />
 
 
 
