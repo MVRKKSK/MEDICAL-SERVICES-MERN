@@ -57,7 +57,7 @@ const ServiceCard = () => {
 
             <div className="col p-2">
                 <div className="card5 card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
-                      
+                <div className="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                         <h2 className="text-center mt-5 mb-4 display-6 lh-1 fw-bold">EMS Providers</h2>
                         <Link to="/ambulanceprovider" className="btn btn-danger btn-lg px-4 mt-2 mb-5"  target="_parent" role="button">
                             View Full List
@@ -65,17 +65,8 @@ const ServiceCard = () => {
                     </div>
                 </div>
             </div>
-
-            {/* <div className="col p-2">
-                <div className="card6 card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
-                    <div className="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                        <h2 className="text-center mt-5 mb-4 display-6 lh-1 fw-bold">Tiffin Service</h2>
-                        <a className="btn btn-warning btn-lg px-4 mt-2 mb-5" href="tiffin-service-list-page.html" target="_parent" role="button">
-                            View Full List
-                        </a>
-                    </div>
-                </div>
-            </div> */}
+</div>
+            
         </div>
      
 

@@ -13,17 +13,16 @@ const FrontPage = () => {
         <div className="container">
             <div className="row flex-lg-row-reverse flex-md-row-reverse justify-content-end align-items-center py-5">
                 <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 pb-5 py-3">
-                    <img src={staysafe} className="mx-auto shadow-lg rounded img-fluid d-none d-sm-none d-md-3-none d-lg-block d-xl-block" alt="Image" />
+                    <img src={staysafe} className="mx-auto shadow-lg rounded img-fluid d-none d-sm-none d-md-3-none d-lg-block d-xl-block" alt="Image"/>
                 </div>
     
                 <div className="col-lg-8 col-md-12 col-sm-12 d-col-lg-8 d-col-md-6 d-col-sm-12 p-3">
-                    <h1 className="display-4 fw-bold lh-1 mb-3">COVID-19 Verified Contacts</h1>
+                    <h1 className="display-4 fw-bold lh-1 mb-3">MEDICAL SERVICES</h1>
                     <p className="lead">
-                        This is an effort to bring together and verify all the contacts of the needed resources
-                        for people fighting COVID-19 in our country.
+                        This is an effort to provide people with almost information needed during medical emergencies.
                     </p>
                     <p className="text-muted">
-                        We have a small team of volunteers who are regularly verifying all the contacts submitted.
+                        Hospitality 
                     </p>
                     <div className="d-md-flex justify-md-content-center">
     
