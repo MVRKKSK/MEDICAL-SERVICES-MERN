@@ -15,11 +15,11 @@ const Navbar = () => {
     <div className="navbar1">
     <nav className="navbar navbar-expand-lg navbar-dark" id="navbar" style={{"background-color": "#FE2C54"}}> 
         <div className="container-fluid">
-            <Link to="/" className="navbar-brand" >
+            {/* <Link to="/" className="navbar-brand" >
                 <div className="logo-container">
                     Covid Relief
                 </div>
-            </Link>
+            </Link> */}
 
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>

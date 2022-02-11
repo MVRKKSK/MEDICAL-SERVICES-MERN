@@ -10,11 +10,11 @@ const PageNavbar = () => {
       <div className="pagenavbar">
           <nav className="navbar navbar-expand-lg navbar-dark" id="navbar" style={{"background-color":"#fe2c54"}}> 
         <div className="container-fluid">
-            <Link to="/" className="navbar-brand" href="#">
+            {/* <Link to="/" className="navbar-brand" href="#">
                 <div className="logo-container">
                     Covid Relief
                 </div>
-            </Link>
+            </Link> */}
 
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
