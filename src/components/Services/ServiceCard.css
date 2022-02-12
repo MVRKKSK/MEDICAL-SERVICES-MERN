@@ -27,3 +27,8 @@
 .card6{
     background-image:url(./service-6-dark.png);
 }
+.py-5{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

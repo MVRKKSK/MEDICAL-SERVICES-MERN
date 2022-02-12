@@ -11,6 +11,7 @@ const ServiceCard = () => {
   return (
       <div className="servicecard">
           <div className="row row-cols-1 row-cols-lg-3 row-cols-md-2 align-items-stretch py-5">
+             
             <div className="col p-2">
                 <div className="card1 card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
                     <div className="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
@@ -66,8 +67,7 @@ const ServiceCard = () => {
                 </div>
             </div>
 </div>
-            
-        </div>
+</div>    
      
 
   );
