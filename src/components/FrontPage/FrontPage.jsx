@@ -22,7 +22,7 @@ const FrontPage = () => {
                         This is an effort to provide people with almost information needed during medical emergencies.
                     </p>
                     <p className="text-muted">
-                        Hospitality 
+                        Serving Hospitality at its best within your Home 
                     </p>
                     <div className="d-md-flex justify-md-content-center">
     
