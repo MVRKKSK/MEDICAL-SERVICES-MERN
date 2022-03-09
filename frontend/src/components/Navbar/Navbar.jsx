@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
  
     <div className="navbar1">
-    <nav className="navbar navbar-expand-lg navbar-dark" id="navbar" style={{"background-color": "#FE2C54"}}> 
+    <nav className="navbar navbar-expand-lg navbar-dark" id="navbar" style={{"background-color": "	#0d6efd"}}> 
         <div className="container-fluid">
             {/* <Link to="/" className="navbar-brand" >
                 <div className="logo-container">
