@@ -10,7 +10,6 @@ const Plasma = new mongoose.Schema(
         Phone_no: {
             required: true,
             type: Number,
-            unique: true
         },
         City: {
             required: true,
