@@ -12,7 +12,7 @@ const websiteslist = () => {
             <div className="row d-flex justify-content-center">
                 <div className="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
                     <table className="table table-hover table-bordered border-secondary">
-                        <thead className="table text-white" style={{"background-color": "#650013"}}>
+                        <thead className="table text-white" style={{"backgroundColor": "#650013"}}>
                             <th className="lead fs-4 p-2 px-5">Website Name</th>
                             <th className="lead fs-4 p-2 px-5">Website URL</th>
                         </thead>

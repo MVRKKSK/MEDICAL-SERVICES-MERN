@@ -17,7 +17,7 @@ const allresourcespages = () => {
   return (
       <div className="allresourcespages">
           <PageNavbar/>
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-3">
+          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-3">
           <ResourcesCard image={WHO} heading={"World Health Organization"} link={"https://www.instagram.com/who/"}/>
           <ResourcesCard image={guj} heading={"Gujrat Covid Support"} link={"https://www.gujaratcovidsupport.org/"}/>
           <ResourcesCard image={drive} heading={"Whole Covid19 Database"} link={"https://drive.google.com/drive/folders/1y8fjrbdGEGmcStkNE_Jf5sNRaDCY4zRA"}/>

@@ -76,7 +76,7 @@ const oxygensuppliers = () => {
             <div className="container">
                 <div className="table-responsive">
                     <table className="table table-hover table-bordered border-danger">
-                        <thead className="table text-white" style={{"background-color": "#650013"}}>
+                        <thead className="table text-white" style={{"backgroundColor": "#650013"}}>
                             <th>Name</th>
                             <th>Phone No</th>
                             <th>Alternate Phone No</th>
