@@ -26,9 +26,10 @@
 }
 
 .nav-item:hover {
-    background-color: #650013;
+    background-color:#0b5bd3;
     border-radius: 10px;
     transition: 0.3s ease;
+    /* #650013; */
 }
 
 .solid {

@@ -8,7 +8,7 @@ import {
 const PageNavbar = () => {
   return (
       <div className="pagenavbar">
-          <nav className="navbar navbar-expand-lg navbar-dark" id="navbar" style={{"background-color":"#fe2c54"}}> 
+          <nav className="navbar navbar-expand-lg navbar-dark" id="navbar" style={{"backgroundColor":"	#0d6efd"}}> 
         <div className="container-fluid">
             {/* <Link to="/" className="navbar-brand" href="#">
                 <div className="logo-container">
