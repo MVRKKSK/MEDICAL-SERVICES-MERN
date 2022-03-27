@@ -6,23 +6,24 @@ const Meds = new mongoose.Schema(
             required: true,
             type: String,
         },
+        Medical_Name:{
+            required: true,
+            type: String
+        },
         Phone_no: {
             required: true,
             type: Number,
         },
         City: {
-            required: true,
             type: String,
         },
         Address: {
-            required: true,
             type: String,
         },
-        
-        Alt_Phone: {
-            required: true,
+        Pincode:{
             type: Number,
-        },
+            required: true
+        }
     },
     { timestamps: true }
 )

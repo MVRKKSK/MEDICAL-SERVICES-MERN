@@ -16,12 +16,10 @@ const Beds = new mongoose.Schema(
             type: Number,
         },
         City: {
-            required: true,
+
             type: String,
-            max: 32
         },
         Address: {
-            required: true,
             type: String,
         },
         ICU_Beds: {
@@ -31,6 +29,10 @@ const Beds = new mongoose.Schema(
         Oxygen_Beds: {
             required: true,
             type: Number,
+        },
+        Pincode:{
+            required: true,
+            type: Number
         }
 
     },
