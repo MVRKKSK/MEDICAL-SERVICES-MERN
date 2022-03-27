@@ -11,7 +11,7 @@ import plasmadonor from './Pages/plasmadonor'
 import hospitalbeds from './Pages/hospitalbeds'
 import oxygensuppliers from './Pages/oxygensuppliers'
 import medssuppliers from './Pages/medssuppliers';
-import ambulanceprovider from './Pages/ambulanceproviders'
+import Ambulanceprovider from './Pages/Ambulanceproviders'
 import allresourcespage from './Pages/allresourcespages'
 import websiteslist from './Pages/websiteslist';
 import instagramresources from './Pages/instagramresources'
@@ -34,7 +34,7 @@ function App() {
         <Route path='/hospitalbeds' exact component={hospitalbeds} />
         <Route path='/oxygensupply' exact component={oxygensuppliers} />
         <Route path='/medssupply' exact component={medssuppliers} />
-        <Route path='/ambulanceprovider' exact component={ambulanceprovider} />
+        <Route path='/ambulanceprovider' exact component={Ambulanceprovider} />
         <Route path='/resourcespage' exact component={allresourcespage} />
         <Route path='/websiteslist' exact component={websiteslist} />
         <Route path='/instagramresources' exact component={instagramresources} />
