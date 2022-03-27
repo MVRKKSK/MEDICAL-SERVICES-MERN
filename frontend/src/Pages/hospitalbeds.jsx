@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Domain } from "../Constants/Domain"
 import PageNavbar from '../components/Navbar/PageNavbar'
 import Footer from '../components/Footer/Footer'
+import moment from "moment"
+
 import {
     BrowserRouter as Router,
     Routes,
@@ -111,7 +113,7 @@ const Hospitalbeds = () => {
                                     <td>{ bed.City }</td>
                                     <td>{ bed.ICU_Beds }</td>
                                     <td>{ bed.Oxygen_Beds }</td>
-                                    <td>{ bed.createdAt.toDateString }</td>
+                                    <td>{moment(bed.createdAt).format('MMM DD, YYYY')}</td>
                                 </tr>
                             ))}
                         </tbody>
