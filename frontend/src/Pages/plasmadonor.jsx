@@ -1,14 +1,34 @@
-import React from 'react';
+import React , {useEffect , useState} from 'react';
 import PageNavbar from '../components/Navbar/PageNavbar'
 import Footer from '../components/Footer/Footer'
 // import Navbar from '../components/Navbar/Navbar'
+import moment from 'moment';
 import {
     BrowserRouter as Router,
     Routes,
     Route,
     Link
   } from "react-router-dom";
+import { Domain } from '../Constants/Domain';
 const PlasmaDonorList = () => {
+        const [loading, setLoading] = useState(false);
+        const [plasma, setPlasma] = useState([]);
+    
+        useEffect(() => {
+            async function getPlasma(){
+                await fetch (Domain + "Plasma", {
+                    method: "GET",
+                })
+                    .then(response => response.json())
+                    .then(jsonData => {
+                        setLoading(false);
+                        console.log("hospital bed data")
+                        setPlasma(jsonData.data)
+                    })
+            }
+            getPlasma();
+        }, [])
+
   return (
       <div className="plasmadonorlist">
           <PageNavbar/>
@@ -84,103 +104,17 @@ const PlasmaDonorList = () => {
                     </thead>
     
                     <tbody>
-                        <tr>
-                            <td>Prashant Agheda</td>
-                            <td>1234567890</td>
-                            <td>Pune</td>
-                            <td>New Sangvi</td>
-                            <td>O +</td>
-                            <td>Submitted: 2 days ago (VERIFIED)</td>
-                        </tr>
-                        <tr>
-                            <td>Rajat Arora</td>
-                            <td>1234567890</td>
-                            <td>Mumbai</td>
-                            <td>Ville Parle</td>
-                            <td>O +</td>
-                            <td>Submitted: 8 days ago (VERIFIED)</td>
-                        </tr>
-                        <tr>
-                            <td>Julie S</td>
-                            <td>1234567890</td>
-                            <td>Pune</td>
-                            <td>Aundh</td>
-                            <td>B +</td>
-                            <td>Submitted: 4 days ago</td>
-                        </tr>
-                        <tr>
-                            <td>Aisha Shaikh</td>
-                            <td>1234567890</td>
-                            <td>Goa</td>
-                            <td>Palm Valley</td>
-                            <td>O -</td>
-                            <td>Submitted: 2 days ago</td>
-                        </tr>
-                        <tr>
-                            <td>Jatin Raj</td>
-                            <td>1234567890</td>
-                            <td>Pune</td>
-                            <td>Kothrud</td>
-                            <td>O -</td>
-                            <td>Submitted: 8 days ago</td>
-                        </tr>
-                        <tr>
-                            <td>Nick T</td>
-                            <td>1234567890</td>
-                            <td>Mumbai</td>
-                            <td>Dombivali</td>
-                            <td>B +</td>
-                            <td>Submitted: 1 day ago (VERIFIED)</td>
-                        </tr>
-                        <tr>
-                            <td>Amit Rana</td>
-                            <td>1234567890</td>
-                            <td>Pune</td>
-                            <td>Warje</td>
-                            <td>B +</td>
-                            <td>Submitted: 6 days ago</td>
-                        </tr>
-                        <tr>
-                            <td>Kashish Banerjee</td>
-                            <td>1234567890</td>
-                            <td>Pune</td>
-                            <td>Warje</td>
-                            <td>B +</td>
-                            <td>Submitted: 6 days ago</td>
-                        </tr>
-                        <tr>
-                            <td>Anil S</td>
-                            <td>1234567890</td>
-                            <td>Pune</td>
-                            <td>Koregaon Park</td>
-                            <td>O +</td>
-                            <td>Submitted: 3 days ago (VERIFIED)</td>
-                        </tr>
-                        <tr>
-                            <td>Nayan Shah</td>
-                            <td>1234567890</td>
-                            <td>Mumbai</td>
-                            <td>Kandivali</td>
-                            <td>A +</td>
-                            <td>Submitted: 2 days ago (VERIFIED)</td>
-                        </tr>
-                        <tr>
-                            <td>Arjun R</td>
-                            <td>1234567890</td>
-                            <td>Mumbai</td>
-                            <td>Boriwali, West</td>
-                            <td>B +</td>
-                            <td>Submitted: 10 days ago</td>
-                        </tr>
-                        <tr>
-                            <td>Maya J</td>
-                            <td>1234567890</td>
-                            <td>Pune</td>
-                            <td>Pimpri Chinchwad</td>
-                            <td>A +</td>
-                            <td>Submitted: 2 days ago</td>
-                        </tr>
-                    </tbody>
+                            {plasma.map((bed) => (
+                                <tr>
+                                    <td>{ bed.Name }</td>
+                                    <td>{ bed.Phone_no }</td>
+                                    <td>{ bed.City }</td>
+                                    <td>{ bed.Address }</td>
+                                    <td>{ bed.Blood_group }</td>
+                                    <td>{moment(bed.createdAt).format('MMM DD, YYYY')}</td>
+                                </tr>
+                            ))}
+                        </tbody>
                 </table>
             </div>
 
