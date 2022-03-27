@@ -11,7 +11,7 @@ import plasmadonor from './Pages/plasmadonor'
 import hospitalbeds from './Pages/hospitalbeds'
 import oxygensuppliers from './Pages/oxygensuppliers'
 import medssuppliers from './Pages/medssuppliers';
-import Ambulanceprovider from './Pages/Ambulanceproviders'
+import Ambulanceprovider from './Pages/ambulanceproviders'
 import allresourcespage from './Pages/allresourcespages'
 import websiteslist from './Pages/websiteslist';
 import instagramresources from './Pages/instagramresources'
