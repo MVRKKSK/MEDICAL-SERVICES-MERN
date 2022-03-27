@@ -11,17 +11,19 @@ const Oxygen = new mongoose.Schema(
             type: Number,
         },
         City: {
-            required: true,
             type: String,
         },
         Address: {
-            required: true,
             type: String,
         },
-        Alt_Phone: {
+        No_of_Cylinders: {
             required: true,
             type: Number,
         },
+        Pincode: {
+            type: Number,
+            required: true
+        }
     },
     { timestamps: true }
 )

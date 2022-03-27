@@ -11,17 +11,19 @@ const Ambulance = new mongoose.Schema(
             type: Number,
         },
         City: {
-            required: true,
             type: String,
         },
         Address: {
-            required: true,
             type: String,
         },
         Ambulance_no: {
             required: true,
             type: String,
         },
+        Pincode:{
+            type:Number,
+            required: true
+        }
     },
     { timestamps: true }
 )

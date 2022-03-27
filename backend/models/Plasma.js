@@ -12,13 +12,9 @@ const Plasma = new mongoose.Schema(
             type: Number,
         },
         City: {
-            required: true,
+
             type: String,
-            max: 32
-        },
-        Address: {
-            required: true,
-            type: String,
+
         },
         Blood_group: {
             required: true,
@@ -30,10 +26,10 @@ const Plasma = new mongoose.Schema(
         },
         DOB: {
             type:String,
-            required: true
         },
-        Alternate_phone: {
-            type: String
+        Aadhar_Card: {
+            type: String,
+            required: true
         }
 
     },
