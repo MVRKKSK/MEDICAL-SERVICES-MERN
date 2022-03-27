@@ -1,5 +1,6 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Footer from '../components/Footer/Footer';
+import axios from "axios"
 import PageNavbar from '../components/Navbar/PageNavbar';
 import {
     BrowserRouter as Router,
@@ -7,19 +8,47 @@ import {
     Route,
     Link
   } from "react-router-dom";
-const medssuppliercontact = () => {
+const Medssuppliercontact = () => {
+
+    const [medicine, setMedicine] = useState("");
+    const [phone, setPhone] = useState("");
+    const [address, setAddress] = useState("");
+    const [city, setCity] = useState("")
+    const [alt, setAlt] = useState("");
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const Data = {
+            Medicine: medicine,
+            Phone_no: phone ,
+            City: city,
+            Address: address,
+            Alt_Phone: alt,
+        }
+        try {
+            const res = await axios.post("http://localhost:5000/api/Meds" , Data)
+
+          console.log(res.data)
+          
+          }
+          catch (err) {
+            console.log(err)
+          }  
+    }
+
   return (
       <div className="medssuppliercontact">
           <PageNavbar/>
           <div className="container mt-5 p-4">
-            <form className="border border-success border-4 rounded-3 p-4 mb-5">
+            <form className="border border-success border-4 rounded-3 p-4 mb-5" onSubmit={handleSubmit}>
                 <h1 className="display-6 fw-bold mark text-center mb-5">
                     Add a COVID-19 Meds/Injection Supplier Contact
                 </h1>
 
                 <div className="form mb-4">
                     <label for="inputState" className="form-label"><b>Medicine / Injection</b></label>
-                    <select id="inputState" className="form-select p-2">
+                    <select id="inputState" className="form-select p-2" value={medicine} onChange={(e) => {setMedicine(e.target.value)}}>
                         <option selected>Select the Medicine / Injection that you Provided</option>
                         <option>Remdesivir</option>
                         <option>Fabiflu</option>
@@ -32,22 +61,22 @@ const medssuppliercontact = () => {
             
                 <div className="form mb-4">
                     <label for="floatingInput" className="p-1"><b>Phone Number *</b></label>
-                    <input type="text" maxlength="10" className="form-control" id="floatingInput" placeholder="10 Digits only..." />
+                    <input type="text" maxlength="10" className="form-control" id="floatingInput" placeholder="10 Digits only..." value={phone} onChange={(e) => {setPhone(e.target.value)}} />
                 </div>
 
                 <div className="form mb-4">
                     <label for="floatingInput" className="p-1"><b>Alternate Phone Number</b></label>
-                    <input type="text" maxlength="10" className="form-control" id="floatingInput" placeholder="Secondary Mobile No..." />
+                    <input type="text" maxlength="10" className="form-control" id="floatingInput" placeholder="Secondary Mobile No..." value={alt} onChange={(e) => {setAlt(e.target.value)}} />
                 </div>
 
                 <div className="form mb-4">
                     <label for="floatingInput" className="p-1"><b>Address (optional)</b></label>
-                    <input type="text" className="form-control" id="floatingInput" placeholder="New Sangvi, Pune"/>
+                    <input type="text" className="form-control" id="floatingInput" placeholder="New Sangvi, Pune" value={address} onChange={(e) => {setAddress(e.target.value)}}/>
                 </div>
 
                 <div className="form mb-4">
                     <label for="inputState" className="form-label p-1"><b>Choose your City *</b></label>
-                    <select id="inputState" className="form-select p-2">
+                    <select id="inputState" className="form-select p-2" value={city} onChange={(e) => {setCity(e.target.value)}}>
                         <option selected>Select City</option>
                         <option>Mumbai</option>
                         <option>Delhi</option>
@@ -77,9 +106,9 @@ const medssuppliercontact = () => {
                     </div>
                 </div>
 
-                <a className="d-grid gap-2 col-12 mx-auto w-80 btn btn-primary mb-3 border border-none" href="#" role="button" type="submit" style={{"background-color": "#650013"}}>
+                <button className="d-grid gap-2 col-12 mx-auto w-80 btn btn-primary mb-3 border border-none" href="#" role="button" type="submit" style={{"background-color": "#650013"}}>
                     Submit
-                </a>
+                </button>
                 
                 <Link to="/medssupply" className="d-grid gap-2 col-12 mx-auto w-80 btn btn-success"  role="button">
                     View All Meds/Injection Suppliers
@@ -92,4 +121,4 @@ const medssuppliercontact = () => {
   );
 };
 
-export default medssuppliercontact;
+export default Medssuppliercontact;

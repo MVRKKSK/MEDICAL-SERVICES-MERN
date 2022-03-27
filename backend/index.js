@@ -8,6 +8,7 @@ const hospitalRoutes = require("./routes/hospital")
 const medsRoutes = require("./routes/meds")
 const oxygenRoutes = require("./routes/oxygen")
 const ambulanceRoutes = require("./routes/ambulance")
+const cors = require("cors")
 
 const PORT = 5000;
 
@@ -26,6 +27,7 @@ mongoose.connect(process.env.MONGO_URL_CONNECTION).then(()=>{
 
 
 /* middleware */
+app.use(cors())
 app.use(morgan("dev"))
 app.use(bodyParser.urlencoded({
     extended: true

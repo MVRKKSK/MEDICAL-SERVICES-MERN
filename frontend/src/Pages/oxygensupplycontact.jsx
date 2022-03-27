@@ -1,4 +1,5 @@
-import React from 'react';
+import React , {useState} from 'react';
+import axios from "axios"
 import Footer from '../components/Footer/Footer';
 import PageNavbar from '../components/Navbar/PageNavbar';
 import {
@@ -7,39 +8,68 @@ import {
     Route,
     Link
   } from "react-router-dom";
-const oxygensupplycontact = () => {
+const Oxygensupplycontact = () => {
+
+    
+    const [name, setName] = useState("");
+    const [phone, setPhone] = useState("");
+    const [address, setAddress] = useState("");
+    const [city, setCity] = useState("")
+    const [alt, setAlt] = useState("");
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const Data = {
+            Name: name,
+            Phone_no: phone ,
+            City: city,
+            Address: address,
+            Alt_Phone: alt,
+        }
+        try {
+            const res = await axios.post("http://localhost:5000/api/Oxygen" , Data)
+
+          console.log(res.data)
+          
+          }
+          catch (err) {
+            console.log(err)
+          }  
+    }
+
   return (
       <div className="oxygensupplycontact">
           <PageNavbar/>
           <div className="container mt-5 p-4">
-            <form className="border border-info border-4 rounded-3 p-4 mb-5">
+            <form className="border border-info border-4 rounded-3 p-4 mb-5" onSubmit={handleSubmit}>
                 <h1 className="display-6 fw-bold mark text-center mb-5">
                     Share Oxygen Supplier Information
                 </h1>
             
                 <div className="form mb-4">
                   <label for="floatingInput" className="p-1"><b>Name *</b></label>
-                  <input type="text" className="form-control" id="floatingInput" />
+                  <input type="text" className="form-control" id="floatingInput" value={name} onChange={(e) => {setName(e.target.value)}} />
                 </div>
 
                 <div className="form mb-4">
                     <label for="floatingInput" className="p-1"><b>Phone Number *</b></label>
-                    <input type="text" maxlength="10" className="form-control" id="floatingInput" placeholder="10 Digits only..." />
+                    <input type="text" maxlength="10" className="form-control" id="floatingInput" placeholder="10 Digits only..." value={phone} onChange={(e) => {setPhone(e.target.value)}} />
                 </div>
 
                 <div className="form mb-4">
                     <label for="floatingInput" className="p-1"><b>Alternate Phone Number</b></label>
-                    <input type="text" maxlength="10" className="form-control" id="floatingInput" placeholder="Secondary Mobile No..." />
+                    <input type="text" maxlength="10" className="form-control" id="floatingInput" placeholder="Secondary Mobile No..." value={alt} onChange={(e) => {setAlt(e.target.value)}} />
                 </div>
 
                 <div className="form mb-4">
                     <label for="floatingInput" className="p-1"><b>Address (optional)</b></label>
-                    <input type="text" className="form-control" id="floatingInput" placeholder="New Sangvi, Pune"/>
+                    <input type="text" className="form-control" id="floatingInput" placeholder="New Sangvi, Pune" value={address} onChange={(e) => {setAddress(e.target.value)}}/>
                 </div>
 
                 <div className="form mb-4">
                     <label for="inputState" className="form-label"><b>Choose your City *</b></label>
-                    <select id="inputState" className="form-select p-2">
+                    <select id="inputState" className="form-select p-2" value={city} onChange={(e) => {setCity(e.target.value)}}>
                         <option selected>Select City</option>
                         <option>Mumbai</option>
                         <option>Delhi</option>
@@ -69,9 +99,9 @@ const oxygensupplycontact = () => {
                     </div>
                 </div>
 
-                <a className="d-grid gap-2 col-12 mx-auto w-80 btn btn-primary mb-3 border border-none" href="#" role="button" type="submit" style={{"background-color": "#650013"}}>
+                <button className="d-grid gap-2 col-12 mx-auto w-80 btn btn-primary mb-3 border border-none" href="#" role="button" type="submit" style={{"background-color": "#650013"}}>
                     Submit
-                </a>
+                </button>
                 
                 <Link to="/oxygensupply" className="d-grid gap-2 col-12 mx-auto w-80 btn btn-info"  role="button">
                     View All Oxygen Suppliers
@@ -84,4 +114,4 @@ const oxygensupplycontact = () => {
   );
 };
 
-export default oxygensupplycontact;
+export default Oxygensupplycontact;

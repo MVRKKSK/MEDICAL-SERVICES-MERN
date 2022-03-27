@@ -7,10 +7,13 @@ const Beds = new mongoose.Schema(
             type: String,
             max: 32
         },
+        Contact_Name: {
+            required: true,
+            type:String
+        },
         Phone_no: {
             required: true,
             type: Number,
-            unique: true
         },
         City: {
             required: true,

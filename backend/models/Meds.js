@@ -2,14 +2,13 @@ const mongoose = require("mongoose")
 
 const Meds = new mongoose.Schema(
     {
-        Name: {
+        Medicine: {
             required: true,
             type: String,
         },
         Phone_no: {
             required: true,
             type: Number,
-            unique: true
         },
         City: {
             required: true,
@@ -19,9 +18,10 @@ const Meds = new mongoose.Schema(
             required: true,
             type: String,
         },
-        Medicine: {
+        
+        Alt_Phone: {
             required: true,
-            type: String,
+            type: Number,
         },
     },
     { timestamps: true }
