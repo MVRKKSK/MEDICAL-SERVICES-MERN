@@ -23,6 +23,17 @@ const Plasma = new mongoose.Schema(
         Blood_group: {
             required: true,
             type: String,
+        },
+        Pincode:{
+            type:Number, 
+            required: true
+        },
+        DOB: {
+            type:String,
+            required: true
+        },
+        Alternate_phone: {
+            type: String
         }
 
     },
