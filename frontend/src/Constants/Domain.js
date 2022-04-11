@@ -1,1 +1,1 @@
-export const Domain = "http://localhost:5000/api/"
+export const Domain = "https://servicure-backend.deveshjain.repl.co/"
